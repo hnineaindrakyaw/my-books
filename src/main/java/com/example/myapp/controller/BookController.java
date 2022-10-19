@@ -17,12 +17,13 @@ public class BookController {
     private BookService bookService;
     @GetMapping("/")
     public  String index(Model model){
-      /*  model.addAttribute("category",new Category());
+       /*model.addAttribute("category",new Category());
         model.addAttribute("author",new Author());
         model.addAttribute("book",new Book());
         model.addAttribute("authors",bookService.findAllAuthors());
         model.addAttribute("categories",bookService.findAllCategory());
         model.addAttribute("books",bookService.findAllBoooks());*/
+
 
 
 
