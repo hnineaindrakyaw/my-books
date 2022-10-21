@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div  th:fragment="cartView">
+<div class="alert alert-success" role="alert" th:if="${cardItems.isEmpty()}">
+  <h3>No Items In Cart</h3>
+</div>
+<table class="table table-striped" th:if="${!cardItems.isEmpty()}" >
+  <thead>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Action</th>
+
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="item: ${cardItems}">
+    <td th:text="${item.id}" ></td>
+    <td th:text="${item.title}"></td>
+    <td th:text="${item.price}"></td>
+    <td>
+      Quantity
+    </td>
+    <td><a th:href="@{'/cart/delete/' +${item.id}}" class="btn btn-outline-danger">Delete</a></td>
+  </tr>
+  </tbody>
+
+
+</table>
+</div>
+
+
+
+</body>
+</html>

@@ -51,5 +51,8 @@ public class CartService {
     public  int cartSize(){
         return  cart.cartSize();
     }
+    public  void remove(BookDto bookDto){
+        cart.removeBookFromCart(bookDto);
+    }
 
 }
