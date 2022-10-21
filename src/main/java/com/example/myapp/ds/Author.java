@@ -1,5 +1,6 @@
 package com.example.myapp.ds;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -12,6 +13,7 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+
 public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

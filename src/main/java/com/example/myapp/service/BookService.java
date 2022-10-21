@@ -55,6 +55,10 @@ public class BookService {
         return  bookDao.findAll();
     }
 
+    public  Book findBookById(int id){
+        return bookDao.findById(id).orElseThrow(EntityNotFoundException::new);
+    }
+
 
 
 
