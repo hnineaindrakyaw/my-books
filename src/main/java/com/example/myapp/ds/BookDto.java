@@ -10,11 +10,12 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
-@Getter
-@Setter
-@ToString
+@Data
 @EqualsAndHashCode
+
+
 
 public class BookDto {
     private  Integer id;
@@ -27,6 +28,11 @@ public class BookDto {
     private String imageUrl;
     private int categoryId;
     private int authorId;
+    private  List<Integer> bookNumber=new LinkedList<>();
+
+    public BookDto() {
+
+    }
 
     public BookDto(Integer id, String title, double price, LocalDate yearPublished, String description, String imageUrl, int categoryId, int authorId) {
         this.id = id;

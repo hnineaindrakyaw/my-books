@@ -22,7 +22,8 @@ public class BookController {
     private BookService bookService;
     @Autowired
     private CartService cartService;
-    @GetMapping("/books/details")
+    //shop View
+    @GetMapping("/shop/books/details")
     public  String bookDetails(@RequestParam("id") int id, Model model){
         model.addAttribute("book",bookService.findBookById(id));
         return "book-details";
@@ -42,11 +43,13 @@ public class BookController {
 
         return "home";
     }
-    @GetMapping("/show-all-books")
+    //shop
+    @GetMapping("/shop/show-all-books")
     public String listBooks(){
        return "list-books";
 
     }
+    //admin
     @GetMapping("/category-form")
     public  String categoryForm(Model model){
         model.addAttribute("category",new Category());

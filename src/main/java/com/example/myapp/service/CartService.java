@@ -54,5 +54,8 @@ public class CartService {
     public  void remove(BookDto bookDto){
         cart.removeBookFromCart(bookDto);
     }
+    public  void clearCart(){
+        cart.clearCart();
+    }
 
 }
